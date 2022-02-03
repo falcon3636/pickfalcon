@@ -4,7 +4,7 @@
 <head>
    <meta charset="utf-8">
    <meta http-equiv="x-ua-compatible" content="ie=edge">
-   <title>Construction HTML-5 Template</title>
+   <title>Falcon DFW Construction</title>
    <meta name="description" content="">
    <meta name="viewport" content="width=device-width, initial-scale=1">
    <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.ico">
@@ -60,7 +60,7 @@
                                     <ul id="navigation">                                                                                                                   
                                        <li><a href="index.html">Home</a></li>
                                        <li><a href="about.html">About</a></li>
-                                       <li><a href="project.html">Projects</a></li>
+                                       <li><a href="project.html">Work</a></li>
                                        <li><a href="services.html">Services</a></li>
                                        <li><a href="blog.html">Blog</a>
                                              <ul class="submenu">
@@ -82,7 +82,7 @@
                         </div>             
                         <div class="col-xl-2 col-lg-2 col-md-3">
                            <div class="header-right-btn f-right d-none d-lg-block">
-                                 <a href="#" class="btn">Contact Now</a>
+                                 <a href="tel:682-888-6063" class="btn">Contact Now</a>
                            </div>
                         </div>
                         <!-- Mobile Menu -->
@@ -511,9 +511,10 @@
                   </aside>
                   <aside class="single_sidebar_widget newsletter_widget">
                      <h4 class="widget_title">Newsletter</h4>
-                     <form action="#">
+                     <form name="email_tips" method="POST" data-netlify="true">
+                         <input type="hidden" name="form-name" value="email_tips" />
                         <div class="form-group">
-                           <input type="email" class="form-control" onfocus="this.placeholder = ''"
+                           <input type="email" name="email" class="form-control" onfocus="this.placeholder = ''"
                               onblur="this.placeholder = 'Enter email'" placeholder='Enter email' required>
                         </div>
                         <button class="button rounded-0 primary-bg text-white w-100 btn_1 boxed-btn"
@@ -540,7 +541,7 @@
                                </div>
                                <div class="footer-tittle">
                                    <div class="footer-pera">
-                                       <p class="info1">Lorem ipsum dolor sit amet, consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore.</p>
+                                       <p class="info1">Experience The Difference</p>
                                    </div>
                                </div>
                            </div>
@@ -550,10 +551,10 @@
                                <div class="footer-tittle">
                                    <h4>Quick Links</h4>
                                    <ul>
-                                       <li><a href="#">About</a></li>
-                                       <li><a href="#">Services</a></li>
-                                       <li><a href="#">Projects</a></li>
-                                       <li><a href="#">Contact Us</a></li>
+                                       <li><a href="about.html">About</a></li>
+                                       <li><a href="services.html">Services</a></li>
+                                       <li><a href="project.html">Work</a></li>
+                                       <li><a href="contact.html">Contact Us</a></li>
                                    </ul>
                                </div>
                            </div>
@@ -578,10 +579,11 @@
                                <!-- Form -->
                                <div class="footer-form">
                                    <div id="mc_embed_signup">
-                                       <form target="_blank" action="https://spondonit.us12.list-manage.com/subscribe/post?u=1462626880ade1ac87bd9c93a&amp;id=92a4423d01" method="get" class="subscribe_form relative mail_part" novalidate="true">
-                                           <input type="email" name="EMAIL" id="newsletter-form-email" placeholder=" Email Address " class="placeholder hide-on-focus" onfocus="this.placeholder = ''" onblur="this.placeholder = ' Email Address '">
+                                       <form name="email_tips" method="POST" class="subscribe_form relative mail_part" data-netlify="true">
+                                           <input type="hidden" name="form-name" value="email_tips" />
+                                           <input type="email" name="email" placeholder=" Email Address " class="placeholder hide-on-focus" onfocus="this.placeholder = ''" onblur="this.placeholder = ' Email Address '">
                                            <div class="form-icon">
-                                               <button type="submit" name="submit" id="newsletter-submit" class="email_icon newsletter-submit button-contactForm">
+                                               <button type="submit" class="email_icon newsletter-submit button-contactForm">
                                                    SIGN UP
                                                </button>
                                            </div>
@@ -639,11 +641,11 @@
       <script src="./assets/js/jquery.sticky.js"></script>
       
       <!-- counter , waypoint -->
-      <script src="http://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.3/waypoints.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.3/waypoints.min.js"></script>
       <script src="./assets/js/jquery.counterup.min.js"></script>
 
       <!-- contact js -->
-      <script src="./assets/js/sendNetlifyFormData.js"></script>
+      <script src="./assets/js/form.js"></script>
 		<!-- Jquery Plugins, main Jquery -->	
       <script src="./assets/js/plugins.js"></script>
       <script src="./assets/js/main.js"></script>

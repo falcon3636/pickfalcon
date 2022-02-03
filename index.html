@@ -971,10 +971,11 @@
                                     <!-- Form -->
                                     <div class="footer-form">
                                         <div id="mc_embed_signup">
-                                            <form name="form_submission" id"email_tips" class="subscribe_form relative mail_part" data-netlify="true">
-                                                <input type="email" name="email" id="email" placeholder="Email Address " class="placeholder hide-on-focus" onfocus="this.placeholder = ''" onblur="this.placeholder = ' Email Address '">
+                                            <form name="email_tips" method="POST" class="subscribe_form relative mail_part" data-netlify="true">
+                                                <input type="email" name="email" placeholder="Email Address " class="placeholder hide-on-focus" onfocus="this.placeholder = ''" onblur="this.placeholder = ' Email Address '">
+                                                    <input type="hidden" name="form-name" value="email_tips" />
                                                 <div class="form-icon">
-                                                    <button type="submit" name="submit" id="email_tips-submit" class="email_icon newsletter-submit button-contactForm">
+                                                    <button type="submit" class="email_icon newsletter-submit button-contactForm">
                                                         SIGN UP
                                                     </button>
                                                 </div>

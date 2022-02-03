@@ -73,7 +73,7 @@
                                         <ul id="navigation">                                                                                                                   
                                             <li><a href="index.html">Home</a></li>
                                             <li><a href="about.html">About</a></li>
-                                            <li><a href="project.html">Projects</a></li>
+                                            <li><a href="project.html">Work</a></li>
                                             <li><a href="services.html">Services</a></li>
                                             <li><a href="blog.html">Blog</a>
                                                 <ul class="submenu">
@@ -95,7 +95,7 @@
                             </div>             
                             <div class="col-xl-2 col-lg-2 col-md-3">
                                 <div class="header-right-btn f-right d-none d-lg-block">
-                                    <a href="#" class="btn">Contact Now</a>
+                                    <a href="tel:682-888-6063" class="btn">Contact Now</a>
                                 </div>
                             </div>
                             <!-- Mobile Menu -->
@@ -120,7 +120,7 @@
                             <nav aria-label="breadcrumb ">
                                 <ol class="breadcrumb">
                                 <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-                                <li class="breadcrumb-item"><a href="#">Contact</a></li> 
+                                <li class="breadcrumb-item"><a href="contact.html">Contact</a></li>
                                 </ol>
                             </nav>
                         </div>
@@ -180,26 +180,27 @@
                         <h2 class="contact-title">Free Estimate</h2>
                     </div>
                     <div class="col-lg-8">
-                        <form class="form-contact contact_form" id="free_estimate" name="form_submission" data-netlify="true">
+                        <form class="form-contact contact_form" name="free_estimate" data-netlify="true">
                             <div class="row">
                                 <div class="col-sm-6">
                                     <div class="form-group">
-                                        <input class="form-control valid" name="first_name" id="first_name" type="text" onfocus="this.placeholder = ''" onblur="this.placeholder = 'First Name'" placeholder="First Name">
+                                        <input type="hidden" name="form-name" value="free_estimate" />
+                                        <input class="form-control valid" name="first_name" type="text" onfocus="this.placeholder = ''" onblur="this.placeholder = 'First Name'" placeholder="First Name" required>
                                     </div>
                                 </div>
                                 <div class="col-sm-6">
                                     <div class="form-group">
-                                        <input class="form-control valid" name="last_name" id="last_name" type="text" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Last Name'" placeholder="Last Name">
+                                        <input class="form-control valid" name="last_name" type="text" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Last Name'" placeholder="Last Name" required>
                                     </div>
                                 </div>
                                 <div class="col-sm-6">
                                     <div class="form-group">
-                                        <input class="form-control" name="email" id="email" type="email" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Email'" placeholder="Email" required>
+                                        <input class="form-control" name="email" type="email" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Email'" placeholder="Email" required>
                                     </div>
                                 </div>
                                 <div class="col-sm-6">
                                     <div class="form-group">
-                                        <input class="form-control" name="phone" id="phone" type="tel" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Phone Number ex. 123-123-1234'" placeholder="Phone Number ex. 123-123-1234">
+                                        <input class="form-control" name="phone" type="tel" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Phone Number ex. 123-123-1234'" placeholder="Phone Number ex. 123-123-1234" required>
                                     </div>
                                 </div>
                             </div>
@@ -256,7 +257,7 @@
                                  </div>
                                  <div class="footer-tittle">
                                      <div class="footer-pera">
-                                         <p class="info1">Lorem ipsum dolor sit amet, consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore.</p>
+                                         <p class="info1">Experience The Difference</p>
                                      </div>
                                  </div>
                              </div>
@@ -266,10 +267,10 @@
                                  <div class="footer-tittle">
                                      <h4>Quick Links</h4>
                                      <ul>
-                                         <li><a href="#">About</a></li>
-                                         <li><a href="#">Services</a></li>
-                                         <li><a href="#">Projects</a></li>
-                                         <li><a href="#">Contact Us</a></li>
+                                         <li><a href="/about.html">About</a></li>
+                                         <li><a href="/services.html">Services</a></li>
+                                         <li><a href="/project.html">Work</a></li>
+                                         <li><a href="/contact.html">Contact Us</a></li>
                                      </ul>
                                  </div>
                              </div>
@@ -292,10 +293,11 @@
                          <div class="col-lg-3 col-md-6 col-sm-8">
                              <div class="single-footer-caption mb-50">
                                  <!-- Form -->
-                                 <div class="footer-form" name="form_submission" id="email_tips" data-netlify="true">>
-                                             <input type="email" name="email" id="email_tips" placeholder=" Email Address " class="placeholder hide-on-focus" onfocus="this.placeholder = ''" onblur="this.placeholder = ' Email Address '">
+                                 <div class="footer-form" name="email_tips" method="POST" data-netlify="true">
+                                     <input type="hidden" name="form-name" value="free_estimate" />
+                                             <input type="email" name="email" placeholder=" Email Address " class="placeholder hide-on-focus" onfocus="this.placeholder = ''" onblur="this.placeholder = ' Email Address '" required>
                                              <div class="form-icon">
-                                                 <button type="submit" name="submit" id="email_tips-submit" class="email_icon newsletter-submit button-contactForm">
+                                                 <button type="submit" class="email_icon newsletter-submit button-contactForm">
                                                      SIGN UP
                                                  </button>
                                              </div>

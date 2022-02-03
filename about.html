@@ -60,7 +60,7 @@
                                         <ul id="navigation">                                                                                                                   
                                             <li><a href="index.html">Home</a></li>
                                             <li><a href="about.html">About</a></li>
-                                            <li><a href="project.html">Projects</a></li>
+                                            <li><a href="project.html">Work</a></li>
                                             <li><a href="services.html">Services</a></li>
                                             <li><a href="blog.html">Blog</a>
                                                 <ul class="submenu">
@@ -82,7 +82,7 @@
                             </div>             
                             <div class="col-xl-2 col-lg-2 col-md-3">
                                 <div class="header-right-btn f-right d-none d-lg-block">
-                                    <a href="#" class="btn">Contact Now</a>
+                                    <a href="tel:682-888-6063" class="btn">Contact Now</a>
                                 </div>
                             </div>
                             <!-- Mobile Menu -->
@@ -318,10 +318,11 @@
                                 <!-- Form -->
                                 <div class="footer-form">
                                     <div id="mc_embed_signup">
-                                        <form name="form_submission" id="email_tips" class="subscribe_form relative mail_part" data-netlify="true">
-                                            <input type="email" name="email" id="email" placeholder=" Email Address " class="placeholder hide-on-focus" onfocus="this.placeholder = ''" onblur="this.placeholder = ' Email Address '">
+                                        <form name="email_tips" class="subscribe_form relative mail_part" data-netlify="true">
+                                            <input type="hidden" name="form-name" value="email_tips" />
+                                            <input type="email" name="email" placeholder=" Email Address " class="placeholder hide-on-focus" onfocus="this.placeholder = ''" onblur="this.placeholder = ' Email Address '" required>
                                             <div class="form-icon">
-                                                <button type="submit" name="submit" id="email_tips-submit" class="email_icon newsletter-submit button-contactForm">
+                                                <button type="submit" class="email_icon newsletter-submit button-contactForm">
                                                     SIGN UP
                                                 </button>
                                             </div>
@@ -379,7 +380,7 @@
 		<script src="./assets/js/jquery.sticky.js"></script>
                
         <!-- counter , waypoint -->
-        <script src="http://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.3/waypoints.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.3/waypoints.min.js"></script>
         <script src="./assets/js/jquery.counterup.min.js"></script>
 
         <!-- contact js -->

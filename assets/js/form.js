@@ -13,7 +13,7 @@ const handleSubmit = (event) => {
     method: "POST",
     headers: { "Content-Type": "application/x-www-form-urlencoded" },
     body: encode({
-      "form_submission": event.target.getAttribute("name"),
+      "form-name": event.target.getAttribute("name"),
       ...name,
     }),
   })
