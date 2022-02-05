@@ -6,6 +6,7 @@
         <title>Falcon DFW Construction</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta property="og:logo" content="assets/img/logo/logo.png">
         <link rel="manifest" href="site.webmanifest">
         <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.ico">
 
@@ -24,92 +25,55 @@
             <link rel="stylesheet" href="assets/css/responsive.css">
             <link rel="stylesheet" href="assets/css/carousel.css">
                <style>
-               html, body {
-                  height: 100%;
-                }
-
-                .wrap {
-                  height: 100%;
-                  display: flex;
-                  align-items: center;
-                  justify-content: center;
-                }
-
-                .button {
-                  min-width: 300px;
-                  min-height: 60px;
-                  font-family: 'Nunito', sans-serif;
-                  font-size: 22px;
-                  text-transform: uppercase;
-                  letter-spacing: 1.3px;
-                  font-weight: 700;
-                  color: #ffffff;
-                  background: #ffffff;
-                background: linear-gradient(90deg, rgba(129,230,217,1) 0%, rgba(79,209,197,1) 100%);
-                  border: none;
-                  border-radius: 1000px;
-                  box-shadow: 12px 12px 24px rgba(79,209,197,.64);
-                  transition: all 0.3s ease-in-out 0s;
-                  cursor: pointer;
-                  outline: none;
-                  position: relative;
-                  padding: 10px;
-                  }
-
-                button::before {
-                content: '';
-                  border-radius: 1000px;
-                  min-width: calc(300px + 12px);
-                  min-height: calc(60px + 12px);
-                  border: 6px solid #ff0015;
-                  box-shadow: 0 0 60px rgba(0,255,203,.64);
-                  position: absolute;
-                  top: 50%;
-                  left: 50%;
-                  transform: translate(-50%, -50%);
-                  opacity: 0;
-                  transition: all .3s ease-in-out 0s;
-                }
-
-                .button:hover, .button:focus {
-                  color: #353546;
-                  transform: translateY(-6px);
-                }
-
-                button:hover::before, button:focus::before {
-                  opacity: 1;
-                }
-
-                button::after {
-                  content: '';
-                  width: 30px; height: 30px;
-                  border-radius: 100%;
-                  border: 6px solid #ff0015;
-                  position: absolute;
-                  z-index: -1;
-                  top: 50%;
-                  left: 50%;
-                  transform: translate(-50%, -50%);
-                  animation: ring 1.5s infinite;
-                }
-
-                button:hover::after, button:focus::after {
-                  animation: none;
-                  display: none;
-                }
-
-                @keyframes ring {
-                  0% {
-                    width: 30px;
-                    height: 30px;
-                    opacity: 1;
-                  }
-                  100% {
-                    width: 300px;
-                    height: 300px;
-                    opacity: 0;
-                  }
-                }
+                   .slider {
+                       width: 2179px;
+                       margin: auto;
+                       overflow: visible;
+                   }
+                   .slider ul {
+                       display: flex;
+                       padding: 0;
+                       animation: cambio 80s infinite linear;
+                   }
+                   .slider li {
+                       padding:0 10px;
+                       list-style: none;
+                   }
+                   .slider img {
+                       max-width: fit-content !important;
+                       height: auto !important;
+                   }
+                   @keyframes cambio {
+                       from {margin-left: 0%}
+                       to {margin-left: -100%}
+                   }
+                   h2 span {
+                     background: #ffffffad;
+                     color: #253d56!important;
+                     text-align: left;
+                     font-family: "Barlow",sans-serif;
+                     padding: 0 10px;
+                     display: inline-block;
+                   }
+             h1 {
+              background: #ffffffad;
+              color: #F22738;
+              font-family: "Barlow",sans-serif;
+              padding: 0 20px;
+              text-align: left;
+              font-size: 55px;
+              font-weight:900;
+              text-transform: uppercase;
+                       }
+                   h2 {
+                    color: #253d56!important;
+                    font-family: "Barlow",sans-serif;
+                    text-align: left;
+                    font-size: 25px;
+                    font-weight:700;
+                    text-transform: uppercase;
+                             }
+              
                    </style>
    </head>
 
@@ -151,17 +115,17 @@
                                             <li><a href="about.html">About</a></li>
                                             <li><a href="project.html">Work</a></li>
                                             <li><a href="services.html">Services</a></li>
-                                            <li><a href="blog.html">Blog</a>
+                                            <ul class="submenu">
+                                                <li><a href="services_details.html">Roofing</a></li>
+                                                <li><a href="services_details.html">Gutters</a></li>
+                                                <li><a href="services_details.html">Fencing</a></li>
+                                                <li><a href="services_details.html">Siding</a></li>
+                                                <li><a href="services_details.html">Landscaping</a></li>
+                                                <li><a href="services_details.html">Windows</a></li>
+                                            </ul>
+                                            <li><a href="blog.html">Pro-Tips</a>
                                                 <ul class="submenu">
-                                                    <li><a href="blog.html">Blog</a></li>
-                                                    <li><a href="single-blog.html">Blog Details</a></li>
-                                                </ul>
-                                            </li>
-                                            <li><a href="#">Pages</a>
-                                                <ul class="submenu">
-                                                    <li><a href="elements.html">Element</a></li>
-                                                    <li><a href="project_details.html">Projects Details</a></li>
-                                                    <li><a href="services_details.html">Services Details</a></li>
+                                                    <li><a href="single-blog.html">Pro-Tips Details</a></li>
                                                 </ul>
                                             </li>
                                             <li><a href="contact.html">Contact</a></li>
@@ -183,15 +147,6 @@
                </div>
             </div>
        </div>
-       <style>
-           h1 {
-               color: white;
-               font-family: "Barlow",sans-serif;
-               font-size: 50px;
-               font-weight: 900;
-               text-transform: uppercase;
-           }
-           </style>
         <!-- Header End -->
     </header>
     <main>
@@ -203,134 +158,40 @@
                 </ol>
                 <div class="carousel-inner">
                   <div class="carousel-item active">
-                    <img class="first-slide" src="assets/img/hero/about.jpg" alt="First slide">
+                    <img class="first-slide" src="assets/img/hero/metal.jpg" alt="Metal Roof">
                     <div class="container">
                       <div class="carousel-caption text-left">
-                        <h1>Example headline.</h1>
-                        <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-                            <div class="wrap">
-                              <button class="button">Submit</button>
-                            </div>
+                        <h1>Roofs That are a Work of Art</h1>
+                        <h2><span>You can have a roof that's both beautiful and affordable</span></h2>
+                        <br></br>
+                        <p><a class="btn btn-secondary btn-lg" href="#" role="button">Get Started</a></p>
                       </div>
                     </div>
                   </div>
                   <div class="carousel-item">
-                    <img class="second-slide" src="assets/img/hero/about.jpg" alt="Second slide">
+                    <img class="second-slide" src="assets/img/hero/blue.jpg" alt="Tile Roof">
                     <div class="container">
-                      <div class="carousel-caption">
-                        <h1>Another example headline.</h1>
-                        <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-                        <div class="wrap">
-                          <button class="button">Submit</button>
-                        </div>
+                      <div class="carousel-caption text-left">
+                        <h1>Build Your Roof In One Day</h1>
+                        <h2><span>Customer Focused, Highly effecient, and technology driven claim to install process</span></h2>
+                        <br></br>
+                        <p><a class="btn btn-secondary btn-lg" href="#" role="button">Get Started</a></p>
                       </div>
                     </div>
                   </div>
                   <div class="carousel-item">
-                    <img class="third-slide" src="assets/img/hero/about.jpg" alt="Third slide">
+                    <img class="third-slide" src="assets/img/hero/black.jpg" alt="Third slide">
                     <div class="container">
-                      <div class="carousel-caption text-right">
-                        <h1>One more for good measure.</h1>
-                        <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-                        <div class="wrap">
-                          <button class="button">Submit</button>
-                        </div>
+                      <div class="carousel-caption text-left">
+                        <h1>insurance claim specialists</h1>
+                        <h2><span>Preferred and trusted by the top insurance carriers</span></h2>
+                        <br></br>
+                        <p><a class="btn btn-secondary btn-lg" href="#" role="button">Get Started</a></p>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
-
-
-              <!-- Marketing messaging and featurettes
-              ================================================== -->
-              <!-- Wrap the rest of the page in another container to center all the content. -->
-
-              <div class="container marketing">
-
-                <!-- Three columns of text below the carousel -->
-                <div class="row">
-                  <div class="col-lg-4">
-                    <img class="rounded-circle" src="assets/img/hero/about.jpg" alt="Generic placeholder image" width="140" height="140">
-                    <h2>Heading</h2>
-                    <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna.</p>
-                    <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
-                  </div><!-- /.col-lg-4 -->
-                  <div class="col-lg-4">
-                    <img class="rounded-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" width="140" height="140">
-                    <h2>Heading</h2>
-                    <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
-                    <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
-                  </div><!-- /.col-lg-4 -->
-                  <div class="col-lg-4">
-                    <img class="rounded-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" width="140" height="140">
-                    <h2>Heading</h2>
-                    <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-                    <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
-                  </div><!-- /.col-lg-4 -->
-                </div><!-- /.row -->
-
-
-                <!-- START THE FEATURETTES -->
-
-                <hr class="featurette-divider">
-
-                <div class="row featurette">
-                  <div class="col-md-7">
-                    <h2 class="featurette-heading">First featurette heading. <span class="text-muted">It'll blow your mind.</span></h2>
-                    <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
-                  </div>
-                  <div class="col-md-5">
-                    <img class="featurette-image img-fluid mx-auto" data-src="holder.js/500x500/auto" alt="Generic placeholder image">
-                  </div>
-                </div>
-
-                <hr class="featurette-divider">
-
-                <div class="row featurette">
-                  <div class="col-md-7 order-md-2">
-                    <h2 class="featurette-heading">Oh yeah, it's that good. <span class="text-muted">See for yourself.</span></h2>
-                    <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
-                  </div>
-                  <div class="col-md-5 order-md-1">
-                    <img class="featurette-image img-fluid mx-auto" data-src="holder.js/500x500/auto" alt="Generic placeholder image">
-                  </div>
-                </div>
-
-                <hr class="featurette-divider">
-
-                <div class="row featurette">
-                  <div class="col-md-7">
-                    <h2 class="featurette-heading">And lastly, this one. <span class="text-muted">Checkmate.</span></h2>
-                    <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
-                  </div>
-                  <div class="col-md-5">
-                    <img class="featurette-image img-fluid mx-auto" data-src="holder.js/500x500/auto" alt="Generic placeholder image">
-                  </div>
-                </div>
-
-                <hr class="featurette-divider">
-
-                <!-- /END THE FEATURETTES -->
-
-              </div><!-- /.container -->
-        <!-- slider Area Start-->
-        <div class="slider-area ">
-            <div class="single-slider hero-overly slider-height2 d-flex align-items-center" data-background="assets/img/hero/about.jpg">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-xl-12">
-                            <div class="hero-cap pt-100">
-                                <h1>Choose Falcon</h1>
-                                <h2>Got Hail Damage?</h2>
-                                <button type="button" class="btn btn-primary btn-lg">Large button</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- slider Area End-->
         <!-- Services Area Start -->
         <div class="services-area1 section-padding30">
             <div class="container">
@@ -349,7 +210,7 @@
                     <div class="col-xl-4 col-lg-4 col-md-6">
                         <div class="single-service-cap mb-30">
                             <div class="service-img">
-                                <img src="assets/img/service/servicess1.png" alt="">
+                                <img src="assets/img/service/roofing.jpg" alt="">
                             </div>
                             <div class="service-cap">
                                 <h4><a href="services_details.html">Roofing</a></h4>
@@ -363,7 +224,7 @@
                     <div class="col-xl-4 col-lg-4 col-md-6">
                         <div class="single-service-cap mb-30">
                             <div class="service-img">
-                                <img src="assets/img/service/servicess2.png" alt="">
+                                <img src="assets/img/service/gutters.jpg" alt="Gutters">
                             </div>
                             <div class="service-cap">
                                 <h4><a href="services_details.html">Gutters</a></h4>
@@ -377,10 +238,52 @@
                     <div class="col-xl-4 col-lg-4 col-md-6">
                         <div class="single-service-cap mb-30">
                             <div class="service-img">
-                                <img src="assets/img/service/servicess3.png" alt="">
+                                <img src="assets/img/service/fencing.jpg" alt="fencing">
                             </div>
                             <div class="service-cap">
-                                <h4><a href="services_details.htmlaa">Siding</a></h4>
+                                <h4><a href="services_details.html">Fencing</a></h4>
+                                <a href="services_details.html" class="more-btn">Learn More <i class="ti-power-off"></i></a>
+                            </div>
+                            <div class="service-icon">
+                                <img src="assets/img/icon/services_icon1.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-4 col-md-6">
+                        <div class="single-service-cap mb-30">
+                            <div class="service-img">
+                                <img src="assets/img/service/siding.jpg" alt="Siding">
+                            </div>
+                            <div class="service-cap">
+                                <h4><a href="services_details.html">Siding</a></h4>
+                                <a href="services_details.html" class="more-btn">Learn More <i class="ti-power-off"></i></a>
+                            </div>
+                            <div class="service-icon">
+                                <img src="assets/img/icon/services_icon1.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-4 col-md-6">
+                        <div class="single-service-cap mb-30">
+                            <div class="service-img">
+                                <img src="assets/img/service/landscaping.jpg" alt="Landscaping">
+                            </div>
+                            <div class="service-cap">
+                                <h4><a href="services_details.html">Landscaping</a></h4>
+                                <a href="services_details.html" class="more-btn">Learn More <i class="ti-power-off"></i></a>
+                            </div>
+                            <div class="service-icon">
+                                <img src="assets/img/icon/services_icon1.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-4 col-md-6">
+                        <div class="single-service-cap mb-30">
+                            <div class="service-img">
+                                <img src="assets/img/service/windows.jpg" alt="Windows and Screens">
+                            </div>
+                            <div class="service-cap">
+                                <h4><a href="services_details.html">Windows</a></h4>
                                 <a href="services_details.html" class="more-btn">Learn More <i class="ti-power-off"></i></a>
                             </div>
                             <div class="service-icon">
@@ -391,6 +294,7 @@
                 </div>
             </div>
         </div>
+       <div></div>
         <!-- Services Area End -->
         <!-- About Area Start -->
         <section class="support-company-area fix pt-10">
@@ -422,6 +326,70 @@
             </div>
         </section>
         <!-- About Area End -->
+        <div class="services-area1 section-padding30">
+            <div class="container">
+                <!-- section tittle -->
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="section-tittle mb-55">
+                            <div class="front-text">
+                                <h2 class="">Our Partners</h2>
+                            </div>
+                            <span class="back-text">Insurance</span>
+                        </div>
+                    </div>
+        <div class="slider">
+        <ul>
+            <li>
+                <img src="https://logo.clearbit.com/allstate.com" alt="">
+            </li>
+            <li>
+                <img src="https://logo.clearbit.com/statefarm.com" alt="">
+            </li>
+            <li>
+                <img src="https://logo.clearbit.com/usaa.com" alt="">
+            </li>
+            <li>
+                <img src="https://logo.clearbit.com/amica.com" alt="">
+            </li>
+            <li>
+                <img src="https://logo.clearbit.com/travelers.com" alt="">
+            </li>
+            <li>
+                <img src="https://logo.clearbit.com/lemonade.com" alt="">
+            </li>
+            <li>
+                <img src="https://logo.clearbit.com/nationwide.com" alt="">
+            </li>
+            <li>
+                <img src="https://logo.clearbit.com/libertymutual.com" alt="">
+            </li>
+            <li>
+                <img src="https://logo.clearbit.com/erieinsurance.com" alt="">
+            </li>
+            <li>
+                <img src="https://logo.clearbit.com/chubb.com" alt="">
+            </li>
+            <li>
+                <img src="https://logo.clearbit.com/amfam.com" alt="">
+            </li>
+            <li>
+                <img src="https://logo.clearbit.com/safeco.com" alt="">
+            </li>
+            <li>
+                <img src="https://logo.clearbit.com/lloyds.com" alt="">
+            </li>
+            <li>
+                <img src="https://logo.clearbit.com/mymeridianinsurance.com" alt="">
+            </li>
+            <li>
+                <img src="https://logo.clearbit.com/hoaic.com" alt="">
+            </li>
+        </ul>
+        </div>
+            </div>
+        </div>
+
         <!-- Project Area Start -->
         <section class="project-area  section-padding30">
             <div class="container">
@@ -1202,12 +1170,15 @@
 		<script src="./assets/js/vendor/jquery-1.12.4.min.js"></script>
         <script src="./assets/js/popper.min.js"></script>
         <script src="./assets/js/bootstrap.min.js"></script>
+        
 	    <!-- Jquery Mobile Menu -->
         <script src="./assets/js/jquery.slicknav.min.js"></script>
 
 		<!-- Jquery Slick , Owl-Carousel Plugins -->
         <script src="./assets/js/owl.carousel.min.js"></script>
+        <script src="./assets/js/carousel.js"></script>
         <script src="./assets/js/slick.min.js"></script>
+        
         <!-- Date Picker -->
         <script src="./assets/js/gijgo.min.js"></script>
 		<!-- One Page, Animated-HeadLin -->
