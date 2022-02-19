@@ -24,36 +24,41 @@
             <link rel="stylesheet" href="assets/css/style.css">
             <link rel="stylesheet" href="assets/css/responsive.css">
             <link rel="stylesheet" href="assets/css/carousel.css">
-               <style>
-                   
-                   .carousel-caption .container h2 {
-                       position:relative;
-                       top:-20px;
-                       font-size: 30px;
-                       font-family: "Barlow",sans-serif;
-                       color: #253d56!important;
-                       background: #ffffffad;
-                       font-weight: 700;
-                       text-align: left;
-                       text-transform: uppercase;
-                    }
-              
-              
-                   .carousel-caption .container h1 {
-                       text-align: left;
-                       color: #F22738!important;
-                       background: #ffffffad;
-                       font-size: 55px;
-                       font-family: "Barlow",sans-serif;
-                       text-transform: uppercase;
-                       font-weight: 900;
-                       padding-top: 1px;
-                       padding-bottom: 5px;
-                      
-                    }
-                   
-              
-                   </style>
+            <style>
+
+                .carousel-caption .container h2 {
+                    position: absolute;
+                    top: -220px;
+                    font-size: 35px;
+                    font-family: "Barlow",sans-serif;
+                    color: #253d56;
+                    background: #ffffffad;
+                    font-weight: 750;
+                    text-align: left;
+                    text-transform: uppercase;
+                 }
+
+
+                .carousel-caption .container h1 {
+                    position: absolute;
+                    top: -300px;
+                    color: #F22738;
+                    background: #ffffffad;
+                    font-size: 55px;
+                    font-family: "Barlow",sans-serif;
+                    text-transform: uppercase;
+                    text-align: left;
+                    font-weight: 900;
+
+                 }
+
+                 .btn .container p {
+                   position: absolute;
+                   text-align: left;
+                   top: -200px;
+                 }
+
+                </style>
    </head>
 
    <body>
@@ -129,8 +134,7 @@
         <!-- Header End -->
     </header>
     <main>
-
-        <div id="myCarousel" class="carousel slide" data-ride="carousel">
+        <div id="myCarousel" class="slider-area" data-ride="carousel">
                 <ol class="carousel-indicators">
                   <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
                   <li data-target="#myCarousel" data-slide-to="1"></li>
@@ -139,8 +143,8 @@
                 <div class="carousel-inner">
                   <div class="carousel-item active">
                     <img class="first-slide" src="assets/img/hero/metal.jpg" width="100%" height="100%" alt="Metal Roof">
-                        <div class="carousel-caption">
-                       <div class="container">
+                    <div class="carousel-caption">
+                      <div class="container">
                         <h1>Roofs That are a Work of Art</h1>
                         <h2>You can have a roof that's both beautiful and affordable</h2>
                         <p><a class="btn btn-secondary btn-lg" href="#" role="button">Get Started</a></p>
@@ -163,7 +167,7 @@
                     <div class="container">
                           <h1>insurance claim specialists</h1>
                         <h2>Preferred and trusted by the top insurance carriers</h2>
-                        <p><a class="btn btn-secondary btn-lg" href="#" role="button">Get Started</a></p>
+                        <p><a class="btn btn-primary btn-lg" href="#" role="button">Get Started</a></p>
                       </div>
                     </div>
                   </div>
@@ -382,8 +386,8 @@
                         </div>
                         <div class="col-lg-6">
                             <div class="properties__button">
-                                <!--Nav Button  -->                                            
-                                <nav> 
+                                <!--Nav Button  -->
+                                <nav>
                                     <div class="nav nav-tabs" id="nav-tab" role="tablist">
                                         <a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="false"> Show  all </a>
                                         <a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false"> Roofing</a>
@@ -402,7 +406,7 @@
                         <!-- Nav Card -->
                         <div class="tab-content active" id="nav-tabContent">
                             <!-- card ONE -->
-                            <div class="tab-pane fade active show" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">           
+                            <div class="tab-pane fade active show" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
                                 <div class="project-caption">
                                     <div class="row">
                                         <div class="col-lg-4 col-md-6">
@@ -1133,16 +1137,16 @@
         </div>
         <!-- Footer End-->
     </footer>
-   
+
 	<!-- JS here -->
-	
+
 		<!-- All JS Custom Plugins Link Here here -->
         <script src="./assets/js/vendor/modernizr-3.5.0.min.js"></script>
 		<!-- Jquery, Popper, Bootstrap -->
 		<script src="./assets/js/vendor/jquery-1.12.4.min.js"></script>
         <script src="./assets/js/popper.min.js"></script>
         <script src="./assets/js/bootstrap.min.js"></script>
-        
+
 	    <!-- Jquery Mobile Menu -->
         <script src="./assets/js/jquery.slicknav.min.js"></script>
 
@@ -1150,7 +1154,7 @@
         <script src="./assets/js/owl.carousel.min.js"></script>
         <script src="./assets/js/carousel.js"></script>
         <script src="./assets/js/slick.min.js"></script>
-        
+
         <!-- Date Picker -->
         <script src="./assets/js/gijgo.min.js"></script>
 		<!-- One Page, Animated-HeadLin -->
@@ -1162,17 +1166,17 @@
         <script src="./assets/js/jquery.scrollUp.min.js"></script>
         <script src="./assets/js/jquery.nice-select.min.js"></script>
 		<script src="./assets/js/jquery.sticky.js"></script>
-               
+
         <!-- counter , waypoint -->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.3/waypoints.min.js"></script>
         <script src="./assets/js/jquery.counterup.min.js"></script>
 
         <!-- contact js -->
         <script src="./assets/js/form.js"></script>
-        
-		<!-- Jquery Plugins, main Jquery -->	
+
+		<!-- Jquery Plugins, main Jquery -->
         <script src="./assets/js/plugins.js"></script>
         <script src="./assets/js/main.js"></script>
-        
+
     </body>
 </html>
