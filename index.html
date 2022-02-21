@@ -7,7 +7,7 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta property="og:logo" content="assets/img/logo/logo.png">
-        <link rel="manifest" href="site.webmanifest">
+        <link rel="manifest" href="assets/img/site.webmanifest">
         <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.ico">
 
         <!-- CSS here -->
@@ -24,6 +24,93 @@
             <link rel="stylesheet" href="assets/css/style.css">
             <link rel="stylesheet" href="assets/css/responsive.css">
             <link rel="stylesheet" href="assets/css/carousel.css">
+<style>
+/* Slider */
+.slick-slide {
+  margin: 0px 20px;
+}
+
+.logo-carousel {
+  overflow: inherit;
+  border-top: 1px solid #353535;
+  border-bottom: 1px solid #353535;
+}
+
+.slick-slide img {
+  width: 100%;
+}
+
+.slick-track::before,
+.slick-track::after {
+  display: table;
+  content: '';
+}
+
+.slick-track::after {
+  clear: both;
+}
+
+.slick-track {
+  padding: 1rem 0;
+}
+
+.slick-loading .slick-track {
+  visibility: hidden;
+}
+
+.slick-slide.dragging img {
+  pointer-events: none;
+}
+
+.slick-loading .slick-slide {
+  visibility: hidden;
+}
+
+.slick-arrow {
+  position: absolute;
+  top: 50%;
+  background: url(https://raw.githubusercontent.com/solodev/infinite-logo-carousel/master/images/arrow.svg?sanitize=true) center no-repeat;
+  color: #fff;
+  filter: invert(77%) sepia(32%) saturate(1%) hue-rotate(344deg) brightness(105%) contrast(103%);
+  border: none;
+  width: 2rem;
+  height: 1.5rem;
+  text-indent: -10000px;
+  margin-top: -16px;
+  z-index: 99;
+}
+
+.slick-arrow.slick-next {
+  right: -40px;
+  transform: rotate(180deg);
+}
+
+.slick-arrow.slick-prev {
+  left: -40px;
+}
+
+/* Media Queries */
+
+@media (max-width: 768px) {
+  .slick-arrow {
+    width: 1rem;
+    height: 1rem;
+  }
+}
+
+body {
+    background-color: #inherit;
+  }
+
+.row {
+  overflow: hidden;
+}
+
+/* JsFiddle Example only/don't use */
+.logo-carousel {
+  margin-top: 32px;
+}
+</style>
 
    </head>
 
@@ -107,15 +194,10 @@
                           <div class="row">
                               <div class="col-lg-11">
                                   <div class="hero__caption">
-                                      <div class="hero-text1">
-
-                                      </div>
-                                      <h1 data-animation="fadeInUp" data-delay=".5s">Falcon</h1>
-                                      <div class="stock-text" data-animation="fadeInUp" data-delay=".8s">
+                                      <h1 data-animation="flip" data-delay=".6s">Falcon</h1>
+                                      <div class="stock-text" data-animation="swing" data-delay=".4s">
                                           <h2>Construction</h2>
                                           <h2>Construction</h2>
-                                      </div>
-                                      <div class="hero-text2 mt-110" data-animation="fadeInUp" data-delay=".9s">
 
                                       </div>
                                   </div>
@@ -123,21 +205,17 @@
                           </div>
                       </div>
                   </div>
+
                   <div class="single-slider  hero-overly slider-height d-flex align-items-center" data-background="assets/img/hero/metal.jpg">
                       <div class="container">
                           <div class="row">
                               <div class="col-lg-11">
                                   <div class="hero__caption">
-                                      <div class="hero-text1">
-
-                                      </div>
-                                      <h1 data-animation="fadeInUp" data-delay=".5s">Falcon</h1>
-                                      <div class="stock-text" data-animation="fadeInUp" data-delay=".8s">
+                                      <h1 data-animation="flip" data-delay=".6s">Falcon</h1>
+                                      <div class="stock-text" data-animation="swing" data-delay=".4s">
                                           <h2>Construction</h2>
                                           <h2>Construction</h2>
-                                      </div>
-                                      <div class="hero-text2 mt-110" data-animation="fadeInUp" data-delay=".9s">
-
+                                          </div>
                                       </div>
                                   </div>
                               </div>
@@ -291,57 +369,21 @@
                             <span class="back-text">Insurance</span>
                         </div>
                     </div>
-        <div class="slider">
-        <ul>
-            <li>
-                <img src="https://logo.clearbit.com/allstate.com" alt="">
-            </li>
-            <li>
-                <img src="https://logo.clearbit.com/statefarm.com" alt="">
-            </li>
-            <li>
-                <img src="https://logo.clearbit.com/usaa.com" alt="">
-            </li>
-            <li>
-                <img src="https://logo.clearbit.com/amica.com" alt="">
-            </li>
-            <li>
-                <img src="https://logo.clearbit.com/travelers.com" alt="">
-            </li>
-            <li>
-                <img src="https://logo.clearbit.com/lemonade.com" alt="">
-            </li>
-            <li>
-                <img src="https://logo.clearbit.com/nationwide.com" alt="">
-            </li>
-            <li>
-                <img src="https://logo.clearbit.com/libertymutual.com" alt="">
-            </li>
-            <li>
-                <img src="https://logo.clearbit.com/erieinsurance.com" alt="">
-            </li>
-            <li>
-                <img src="https://logo.clearbit.com/chubb.com" alt="">
-            </li>
-            <li>
-                <img src="https://logo.clearbit.com/amfam.com" alt="">
-            </li>
-            <li>
-                <img src="https://logo.clearbit.com/safeco.com" alt="">
-            </li>
-            <li>
-                <img src="https://logo.clearbit.com/lloyds.com" alt="">
-            </li>
-            <li>
-                <img src="https://logo.clearbit.com/mymeridianinsurance.com" alt="">
-            </li>
-            <li>
-                <img src="https://logo.clearbit.com/hoaic.com" alt="">
-            </li>
-        </ul>
-        </div>
-            </div>
-        </div>
+                    <div class="row">
+                      <div class="container">
+                        <section class="logo-carousel slider" data-arrows="true">
+                          <div class="slide"><img src="https://logo.clearbit.com/allstate.com"></div>
+                          <div class="slide"><img src="https://logo.clearbit.com/statefarm.com"></div>
+                          <div class="slide"><img src="https://logo.clearbit.com/usaa.com"></div>
+                          <div class="slide"><img src="https://logo.clearbit.com/amica.com"></div>
+                          <div class="slide"><img src="https://logo.clearbit.com/travelers.com"></div>
+                          <div class="slide"><img src="https://logo.clearbit.com/lemonade.com"></div>
+                          <div class="slide"><img src="https://logo.clearbit.com/nationwide.com"></div>
+                          <div class="slide"><img src="https://logo.clearbit.com/libertymutual.com"></div>
+                        </section>
+                      </div>
+                    </div>
+
 
         <!-- Project Area Start -->
         <section class="project-area  section-padding30">
@@ -1149,6 +1191,29 @@
 		<!-- Jquery Plugins, main Jquery -->
         <script src="./assets/js/plugins.js"></script>
         <script src="./assets/js/main.js"></script>
-
+<script>
+$(document).ready(function() {
+  $('.logo-carousel').slick({
+    slidesToShow: 6,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 1000,
+    arrows: true,
+    dots: false,
+    pauseOnHover: false,
+    responsive: [{
+      breakpoint: 768,
+      settings: {
+        slidesToShow: 4
+      }
+    }, {
+      breakpoint: 520,
+      settings: {
+        slidesToShow: 2
+      }
+    }]
+  });
+});
+</script>
     </body>
 </html>
