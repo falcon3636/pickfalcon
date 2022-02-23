@@ -157,17 +157,33 @@ p {
 
 .bg-img-1 {
 	background-image: url(../img/hero/metal.jpg)
-  width: auto;
-  height: auto;
-  height: auto;
+  /* Full height */
+ height: 100%;
+
+ /* Center and scale the image nicely */
+ background-position: center;
+ background-repeat: no-repeat;
+ background-size: cover;
 }
 
 .bg-img-2 {
 	background-image: url(../img/hero/blue.jpg)
+  height: 100%;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .cta-bg-1 {
 	background-image: url(../img/hero/black.jpg)
+  height: 100%;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .img {
@@ -2894,7 +2910,6 @@ hr {
 	line-height: 1.2;
 	text-transform: uppercase;
 	color: #253d56;
-	margin: 0;
 	padding: 0
 }
 

@@ -1,0 +1,113 @@
+
+.modal-dialog,
+.exit-intent-dialog,
+.chat-intent-dialog {
+  position: relative;
+  margin: 20px auto auto auto;
+}
+
+.exit-intent-dialog {
+  max-width: 400px;
+  min-width: 320px;
+}
+
+.exit-intent-content {
+  position: relative;
+  background-color: #ffffff;
+  border-radius: 6px;
+  -webkit-box-shadow: 0 2px 20px rgba(41, 59, 77, 0.3);
+  box-shadow: 0 2px 20px rgba(41, 59, 77, 0.3);
+  -webkit-background-clip: padding-box;
+          background-clip: padding-box;
+  outline: 0;
+    text-align: center;
+}
+
+.exit-intent-header,
+.exit-intent-body,
+.exit-intent-footer {
+  padding: 15px;
+}
+
+.exit-intent-body {
+  position: relative;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+
+
+.exit-intent-logo {
+  max-width: 250px !important;
+  margin: 0 auto 15px auto !important;
+  display: inline-block !important;
+}
+
+.exit-intent-cta-heading,
+.exit-intent-title,
+.exit-intent-description,
+.exit-intent-content .btn {
+   line-height: 1.42857143 !important;
+}
+
+.exit-intent-content .btn {
+  font-size: 14px;
+}
+
+.exit-intent-dialog .btn-intent-close {
+    background-color: transparent !important;
+}
+
+.exit-intent-cta-heading,
+.exit-intent-description {
+  font-size: 16px;
+}
+
+.exit-intent-title,
+.chat-content .exit-intent-cta-heading {
+  font-size: 20px;
+}
+
+.exit-intent-title {
+  margin: 0 0 10px 0!important;
+}
+
+.exit-intent-img {
+  margin: 0 0 15px 0!important;
+}
+
+.exit-intent-cta-heading,
+.exit-intent-description {
+  margin: 0 !important;
+}
+
+.exit-intent-content .btn {
+    border: none !important;
+}
+
+.exit-intent-description,
+.exit-intent-dialog .btn-intent-close {
+    opacity: .6 !important;
+}
+
+.chat-content .exit-intent-logo {
+    margin-bottom: 0 !important;
+}
+
+.chat-content .exit-intent-description {
+    margin-bottom: 10px !important;
+}
+
+.chat-content .btn {
+   width: 88px;
+   margin: 0 5px;
+   vertical-align: middle;
+}
+
+.exit-intent-form-group {
+    margin-top: 15px;
+}
+
+.exit-intent-form-group .form-group + .form-group {
+  margin-top: 15px;
+}
