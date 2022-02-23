@@ -1,0 +1,668 @@
+
+.psai-app-container,
+.psai-app-container * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    line-height: 1;
+}
+/* form styles
+    - color
+*/
+.psai-app-container {
+    color: #286090;
+    z-index: 1000050;
+}
+
+.psai-screentakeover-on .psai-dt-start-banner {
+    display:none;
+}
+
+.psai-dt-start-banner .psai-app-dec-box,
+.psai-dt-screen-takeover .psai-app-dec-box {
+    background: #fff;
+    padding: 20px 20px 0 20px;
+}
+.psai-dt-start-banner .psai-app-dec-box .psai-app-dec-box-bottom,
+.psai-dt-screen-takeover .psai-app-dec-box .psai-app-dec-box-bottom {
+    height:20px;
+}
+.psai-chat-app .psai-app-dec-box .psai-app-dec-box-bottom {
+    height: 0;
+}
+.psai-chat-app .psai-app-dec-box {
+    padding: 0;
+}
+.psai-app-container .psai-app-panel img {
+    max-width:100%;
+    height:auto;
+    margin-bottom:10px;
+}
+.psai-dt-screen-takeover.psai-chat-app .psai-app-dec-box {
+    width:100%;
+}
+
+/* form styles
+    - Background
+    - Shadow
+*/
+.psai-dt-start-banner .psai-app-dec-box {
+    height: 100%;
+    max-height: calc(100vh - 120px);
+    -webkit-overflow-scrolling: touch;
+    overflow: auto;
+}
+.psai-dt-start-banner .psai-app-panel {
+    position: relative;
+    position: fixed;
+    bottom: 80px;
+    left: 0;
+    max-width: 350px;
+    width: 100%;
+    z-index: 1000010;
+    visibility: hidden;
+    opacity: 0;
+    transform: translateY(10px);
+    box-shadow: 0 0 3px 0 rgba(0,0,0,.3);
+    background: #fff;
+    border-radius: 4px;
+    margin: 10px;
+}
+.show.psai-chat-app .psai-app-panel,
+.psai-chat-app .psai-app-dec-box {
+    height: 400px;
+    overflow: hidden;
+}
+@media (min-width:768px) {
+    .psai-dt-start-banner .psai-app-dec-box .psai-dismiss {
+        display:none;
+    }
+}
+
+/* form styles
+    - padding
+    - if has padding - .psai-app-heading - margin-left:-padding; margin-right:-padding;
+    if first child of .psai-app-step = margin-top:-padding;
+*/
+
+.psai-dt-screen-takeover {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    overflow-x: hidden;
+    overflow-y: auto;
+    top: 0;
+    left: 0;
+    z-index: 1000072;
+    display:none;
+}
+.psai-dt-screen-takeover.show {
+    display:block;
+
+}
+.psai-dt-screen-takeover .psai-app-panel {
+    min-height: 100%;
+    max-width: 450px;
+    margin:auto;
+    display:-ms-flexbox;
+    display:flex;
+    align-items:center;
+    background:transparent;
+
+}
+.psai-dt-screen-takeover .psai-app-dec-box {
+    position:relative;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+}
+.psai-app-dec-box .psai-dismiss {
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 36px;
+    height: 36px;
+    width: 36px;
+    color: #333;
+    display: -ms-flexbox;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000099;
+    cursor: pointer;
+    background: #fff;
+    opacity: .7;
+}
+
+.psai-backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000040;
+    width: 100vw;
+    height: 100vh;
+    background: #000;
+    opacity: .5;
+}
+
+
+
+.psai-app-container.psai-dt-start-banner.show .psai-app-panel {
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(0);
+    transition: visibility .2s, opacity 0.2s ease-in, transform 0.2s ease-in;
+}
+
+@media (max-width:767px) {
+    .psai-app-modal-open, .psai-app-modal-open > body {
+        overflow: hidden;
+        height: 100%;
+    }
+
+    .show.psai-chat-app .psai-app-panel {
+        height: auto;
+        overflow: hidden;
+    }
+
+    .show.psai-chat-app .psai-app-dec-box,
+    .show.psai-chat-app .psai-app-panel {
+        height: 100%;
+    }
+
+    .psai-chat-app .psai-app-panel,
+    .psai-dt-screen-takeover.psai-chat-app .psai-app-panel {
+        max-width: unset;
+    }
+
+    .psai-app-container.show {
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+    }
+
+
+    .psai-chat-app.psai-dt-start-banner .psai-app-panel,
+    .psai-app-dec-box {
+        background: #fff;
+    }
+    .psai-dt-start-banner .psai-app-dec-box {
+        max-height:unset;
+    }
+    .psai-dt-start-banner .psai-app-panel {
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        margin: 0;
+        max-width: unset;
+        max-height: unset;
+        border-radius: 0;
+    }
+
+    .psai-dt-start-banner .psai-app-panel .psai-app-step {
+        padding-bottom: 15px;
+    }
+}
+
+.psai-app__launcher-container {
+    position: fixed;
+    bottom: 15px;
+    left: 0;
+    margin-left: 15px;
+    margin-right: 15px;
+    z-index: 1000000;
+    font-family: Arial, sans-serif;
+}
+
+.psai-app__launcher-container .psai-app__launcher-inner {
+    position: relative;
+    top: 0;
+    left: 0;
+    cursor: pointer;
+}
+
+.psai-app__launcher-container .psai-app-trigger svg {
+    display: block;
+    width:60px;
+    height:60px;
+}
+
+.psai-app__launcher-container .psai-app-trigger {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    opacity: 1;
+    transition: opacity .2s linear;
+    z-index: 1;
+    border-radius: 50%;
+    box-shadow: 0 0 5px 0 rgba(0,0,0,.2);
+}
+.psai-app__launcher-container .psai-app-button-icon .psai-app-trigger {
+    border-radius: 50%;
+    width: 60px;
+    width: 60px;
+    background: #db050d;
+}
+.psai-app__launcher-container .psai-app-button .psai-app-trigger {
+    display:inline-block;
+    padding:10px 18px;
+    border-radius:4px;
+    color:#fff;
+    background:#007bff;
+    white-space:nowrap;
+    font-size:14px;
+}
+.right .psai-app__launcher-inner.psai-app-button .psai-app-trigger {
+    left:auto;
+    right:0;
+}
+.right .psai-app__launcher-container .psai-app_prompt {
+    right: 0;
+    left: auto;
+}
+.psai-app__launcher-container .psai-app_prompt {
+    display: block;
+    position: absolute;
+    font-family: 'Open Sans', Segoe, 'San Francisco', sans-serif;
+    bottom: 78px;
+    left: 0;
+    width: 220px;
+    animation: introbubble 8s linear forwards;
+}
+@media (max-width:991px){
+    .psai-app__launcher-container .psai-app_prompt {
+        display:none;
+    }
+}
+.psai-app__launcher-container .psai-app_prompt .psai-app_content {
+    border-radius: 4px;
+    box-shadow: 0 8px 20px 0 rgba(0,0,0,.24);
+    padding: 15px;
+    background: #fff;
+    border: 1px solid #ddd;
+    font-size: 16px;
+    color: #333;
+    cursor:pointer;
+}
+.psai-chat-app .psai-app__launcher-container .psai-chatapp_avatar {
+    display:block;
+}
+.psai-app__launcher-container .psai-chatapp_avatar {
+    float: left;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+    background: url(https://scciwidgetops.blob.core.windows.net/applicationimage/gia.jpg) no-repeat 50% 50%;
+    background-size: cover;
+    overflow: hidden;
+    display: none;
+}
+.psai-app__launcher-container .psai-app_prompt .psai-app_message {
+    line-height: 140%;
+    text-align: center;
+}
+
+.psai-app__launcher-container .psai-app_prompt .psai-app_close-header {
+    text-align: right;
+    display: none;
+}
+
+.psai-app__launcher-container .psai-app_prompt:hover .psai-app_close-header {
+    margin-bottom:8px;
+    display: block;
+}
+.psai-app__launcher-container .psai-app_prompt .psai-app_close-prompt {
+    background: #999;
+    color: #fff;
+    border-radius: 10px;
+    font-size: 10px;
+    right: 0;
+    font-weight: normal;
+    padding: 3px 5px;
+    line-height: 1;
+    font-family: Arial, sans-serif;
+    text-decoration: none;
+}
+.psai-app__launcher-container .psai-app_prompt .psai-app_close-prompt:hover,
+.psai-app__launcher-container .psai-app_prompt .psai-app_close-prompt:focus {
+    text-decoration: none;
+    opacity: .7;
+}
+
+.psai-app__launcher-container .psai-app_prompt::after {
+    content: '';
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    bottom: -8px;
+    left: 20px;
+    background: #fff;
+    border-radius: 4px;
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+.psai-app-container.right .psai-app_prompt::after {
+    left: auto;
+    right:20px;
+}
+.psai-app-container.right .psai-app-panel {
+    left: auto;
+    right: 0;
+}
+
+@keyframes introbubble {
+    0% {
+        opacity: 0;
+        transform: translateY(5px);
+    }
+
+    5% {
+        opacity: 1;
+        transform: translateY(5px);
+    }
+
+    7% {
+        transform: translateY(0);
+    }
+
+    90% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.psai-app-container.show .psai-app__launcher-container .psai-app-trigger {
+    opacity: 0;
+}
+
+.psai-app__launcher-container .psai-app-close {
+    position: relative;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: #222;
+    z-index: 0;
+    transform: rotate(-90deg);
+    transition: transform .2s linear;
+    opacity: 0;
+}
+
+.psai-app__launcher-container .psai-app-close::after {
+    content: "\00D7";
+    line-height: 59px;
+    color: #fff;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    text-align: center;
+    font-size: 36px;
+}
+
+.psai-app-container.show .psai-app__launcher-container .psai-app-close {
+    z-index: 2;
+    transform: rotate(0);
+    opacity: 1;
+}
+
+.psai-app-container .psai-app-form {
+    margin: auto;
+    background: transparent;
+    position: relative;
+}
+
+/*
+    heading style
+    - color
+    - align
+    - size
+    - style
+    - padding
+*/
+.psai-app-container .psai-app-heading {
+    font-size: 30px;
+    font-weight: bold;
+    line-height: 1;
+    color: inherit;
+}
+
+/*
+    text style
+    - color
+    - align
+    - size
+    - style
+*/
+.psai-app-form .psai-app-textblock {
+    font-size: 14px;
+    font-weight: normal;
+    margin-bottom: 10px;
+    line-height: 1.5;
+    color: inherit;
+}
+
+.psai-app-form .psai-app-form-group,
+.psai-app-forecast {
+    margin-bottom: 15px;
+}
+
+.psai-app-form label,
+.psai-app-form .psai-app-label {
+    display: inline-block;
+    font-weight: normal;
+    margin-bottom: 4px;
+    font-size: 14px;
+    color: inherit;
+}
+
+.psai-app-form .psai-app-label-optional::after {
+    content: " optional";
+    opacity: .5;
+    font-size: 80%;
+}
+
+.psai-app-form .psai-app-form-control {
+    display: block;
+    width: 100%;
+    padding: 6px 8px;
+    font-size: 15px;
+    color: #333;
+    font-weight: normal;
+    text-align: left;
+    border: 1px solid #ced4da;
+    line-height: 1.5;
+    background: #fff;
+    font-family: Arial, sans-serif;
+    height: auto;
+    max-width:unset;
+}
+
+.psai-app-form .psai-app-checkinput input {
+    margin-right: 8px;
+}
+
+.psai-app-form .has-error .psai-app-form-control,
+.psai-app-form .has-error .psai-app-form-control:focus {
+    border-color: #dc3545;
+    box-shadow: 0 0 0 .2rem rgba(220,53,69,.25);
+}
+
+.psai-app-form .psai-app-form-control:focus {
+    border-color: #80bdff;
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+.psai-app-form .has-error .invalid-feedback {
+    color: #dc3545;
+    font-size: 12px;
+    display: block;
+    margin-top:6px;
+}
+
+.psai-app-form .psai-app-button {
+    display: inline-block;
+    padding: 10px 16px;
+    background: #db050d;
+    color: #fff;
+    font-size: 15px;
+    line-height: 1.5;
+    text-align: center;
+    border-radius: 4px;
+    text-decoration: none;
+    float: none;
+    border: 0;
+}
+
+.psai-app-form .psai-app-button-block {
+    display: block;
+    width: 100%;
+}
+
+.psai-app-form .psai-app-button:hover,
+.psai-app-form .psai-app-button:focus {
+    text-decoration: none;
+    color: #fff;
+    opacity: .8;
+}
+
+.psai-app-form .psai-app-button:disabled {
+    opacity: .7;
+}
+
+.psai-app-bold {
+    font-weight: bold;
+}
+
+.psai-app-media {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: start;
+    align-items: flex-start;
+    margin-bottom: 10px;
+}
+
+.psai-app-media:last-child {
+    margin-bottom: 0;
+}
+
+.psai-app-media-body {
+    -ms-flex: 1;
+    flex: 1;
+    font-size: 14px;
+    line-height: 1.3;
+}
+.psai-app-forecast.psai-loading {
+    text-align:center;
+}
+.psai-app-forecast .psai-app-spinner {
+    border-radius: 50%;
+    margin-left:auto;
+    margin-right:auto;
+    border: 3px solid rgba(0,0,0,.5);
+    border-top-color: transparent;
+    margin-bottom:10px;
+    width:30px;
+    height:30px;
+    -webkit-animation: psaiSpin 1s linear infinite;
+    -moz-animation: psaiSpin 1s linear infinite;
+    animation: psaiSpin 1s linear infinite;
+}
+@-moz-keyframes psaiSpin {
+    100% {
+        -moz-transform: rotate(360deg);
+    }
+}
+
+@-webkit-keyframes psaiSpin {
+    100% {
+        -webkit-transform: rotate(360deg);
+    }
+}
+
+@keyframes psaiSpin {
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+
+
+.psai-app-forecast .psai-app-media {
+    background: rgba(0,0,0,.03);
+    align-items: center;
+}
+
+.psai-app-forecast .psai-app-media-left {
+    width: 60px;
+}
+
+.psai-app-form .here-address-container {
+    position: relative;
+}
+
+.psai-app-form .here-address-container .inner {
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background: #fff;
+    box-shadow: 0 1px 6px 0 rgba(0, 0, 0, 0.2);
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 100;
+}
+
+.psai-app-form .here-address-container .inner .here-address {
+    display: block;
+    padding: 5px 10px;
+    font-size: 13px;
+    cursor: pointer;
+    color: #333;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    line-height: 20px;
+}
+
+.psai-app-form .here-address-container .inner .here-address:hover,
+.psai-app-form .here-address-container .inner .here-address:focus {
+    background: #fafafa;
+    text-decoration: none;
+}
+
+.psai-app-form .here-address-container .inner .here-address.selected {
+    background: #eaf4ff;
+}
+
+.psai-app-loading::after {
+    overflow: hidden;
+    display: inline-block;
+    vertical-align: bottom;
+    width: 0px;
+}
+
+@keyframes ellipsis {
+    to {
+        width: 1.25em;
+    }
+}
+
+@-webkit-keyframes ellipsis {
+    to {
+        width: 1.25em;
+    }
+}
