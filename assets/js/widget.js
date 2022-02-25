@@ -83,6 +83,12 @@
                         headers: f(),
                         async: false,
                         url: "https://apps.predictivesalesai.com/ws/external/ps-app/validate-status-disable/",
+                        success: function(aa) {
+                            H = aa
+                        },
+                        error: function() {
+                            H = false
+                        }
                     });
                     if (H) {
                         return
