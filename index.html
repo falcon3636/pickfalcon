@@ -1159,8 +1159,7 @@ body {
 
 		<!-- All JS Custom Plugins Link Here here -->
         <script src="./assets/js/vendor/modernizr-3.5.0.min.js"></script>
-		<!-- Jquery, Popper, Bootstrap -->
-		<script src="./assets/js/vendor/jquery-1.12.4.min.js"></script>
+		
         <script src="./assets/js/popper.min.js"></script>
         <script src="./assets/js/bootstrap.min.js"></script>
 
@@ -1194,7 +1193,20 @@ body {
 		<!-- Jquery Plugins, main Jquery -->
         <script src="./assets/js/plugins.js"></script>
         <script src="./assets/js/main.js"></script>
-<script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <script>
+          $('document').ready(function() {
+              $.ajax({
+                url: "https://api.snoopi.io/check?apikey=bc3f18b0661612cf2410b8ab2e75ab73",
+                dataType: "jsonp",
+                jsonpCallback: "unBounce"
+              });
+          }); // Ready
+      function unBounce(json){
+         $('#location').html(json.City + ", " + json.State);
+      }
+      </script>
+		    <script>
 $(document).ready(function() {
   $('.logo-carousel').slick({
     slidesToShow: 6,
